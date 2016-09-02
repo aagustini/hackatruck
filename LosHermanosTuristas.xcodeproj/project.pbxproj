@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F041F291D79B93200DED750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F041F281D79B93200DED750 /* AppDelegate.swift */; };
 		3F041F2B1D79B93200DED750 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F041F2A1D79B93200DED750 /* ViewController.swift */; };
 		3F041F2E1D79B93200DED750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F2C1D79B93200DED750 /* Main.storyboard */; };
 		3F041F331D79B93200DED750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F321D79B93200DED750 /* Assets.xcassets */; };
 		3F041F361D79B93200DED750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F341D79B93200DED750 /* LaunchScreen.storyboard */; };
 		3FDD34831D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34811D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld */; };
+		3FDD34991D79BF6200AC2D8A /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34951D79BF6200AC2D8A /* Tag+CoreDataProperties.swift */; };
+		3FDD349A1D79BF6200AC2D8A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34961D79BF6200AC2D8A /* Tag.swift */; };
+		3FDD349B1D79BF6200AC2D8A /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34971D79BF6200AC2D8A /* Photo+CoreDataProperties.swift */; };
+		3FDD349C1D79BF6200AC2D8A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34981D79BF6200AC2D8A /* Photo.swift */; };
+		3FDD349E1D79BF8900AC2D8A /* PhotoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD349D1D79BF8900AC2D8A /* PhotoDAO.swift */; };
+		3FDD34A01D79C2E700AC2D8A /* TagDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD349F1D79C2E700AC2D8A /* TagDAO.swift */; };
+		3FDD34A21D79C47B00AC2D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34A11D79C47B00AC2D8A /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F041F251D79B93200DED750 /* LosHermanosTuristas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LosHermanosTuristas.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F041F281D79B93200DED750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F041F2A1D79B93200DED750 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F041F2D1D79B93200DED750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F041F321D79B93200DED750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F041F351D79B93200DED750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F041F371D79B93200DED750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDD34821D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LosHermanosTuristas.xcdatamodel; sourceTree = "<group>"; };
+		3FDD34951D79BF6200AC2D8A /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3FDD34961D79BF6200AC2D8A /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		3FDD34971D79BF6200AC2D8A /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3FDD34981D79BF6200AC2D8A /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		3FDD349D1D79BF8900AC2D8A /* PhotoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDAO.swift; sourceTree = "<group>"; };
+		3FDD349F1D79C2E700AC2D8A /* TagDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagDAO.swift; sourceTree = "<group>"; };
+		3FDD34A11D79C47B00AC2D8A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +68,9 @@
 		3F041F271D79B93200DED750 /* LosHermanosTuristas */ = {
 			isa = PBXGroup;
 			children = (
+				3FDD34A11D79C47B00AC2D8A /* AppDelegate.swift */,
+				3FDD348C1D79BDEC00AC2D8A /* DAO */,
 				3FDD34811D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld */,
-				3F041F281D79B93200DED750 /* AppDelegate.swift */,
 				3F041F2A1D79B93200DED750 /* ViewController.swift */,
 				3F041F2C1D79B93200DED750 /* Main.storyboard */,
 				3F041F321D79B93200DED750 /* Assets.xcassets */,
@@ -65,6 +78,19 @@
 				3F041F371D79B93200DED750 /* Info.plist */,
 			);
 			path = LosHermanosTuristas;
+			sourceTree = "<group>";
+		};
+		3FDD348C1D79BDEC00AC2D8A /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				3FDD34951D79BF6200AC2D8A /* Tag+CoreDataProperties.swift */,
+				3FDD34961D79BF6200AC2D8A /* Tag.swift */,
+				3FDD34971D79BF6200AC2D8A /* Photo+CoreDataProperties.swift */,
+				3FDD34981D79BF6200AC2D8A /* Photo.swift */,
+				3FDD349D1D79BF8900AC2D8A /* PhotoDAO.swift */,
+				3FDD349F1D79C2E700AC2D8A /* TagDAO.swift */,
+			);
+			name = DAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FDD349C1D79BF6200AC2D8A /* Photo.swift in Sources */,
+				3FDD349A1D79BF6200AC2D8A /* Tag.swift in Sources */,
+				3FDD349E1D79BF8900AC2D8A /* PhotoDAO.swift in Sources */,
+				3FDD34A21D79C47B00AC2D8A /* AppDelegate.swift in Sources */,
 				3FDD34831D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld in Sources */,
 				3F041F2B1D79B93200DED750 /* ViewController.swift in Sources */,
-				3F041F291D79B93200DED750 /* AppDelegate.swift in Sources */,
+				3FDD349B1D79BF6200AC2D8A /* Photo+CoreDataProperties.swift in Sources */,
+				3FDD34991D79BF6200AC2D8A /* Tag+CoreDataProperties.swift in Sources */,
+				3FDD34A01D79C2E700AC2D8A /* TagDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
