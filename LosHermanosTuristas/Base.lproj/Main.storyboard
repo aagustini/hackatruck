@@ -24,7 +24,7 @@
         <!--Mapa-->
         <scene sceneID="wmA-Md-qrI">
             <objects>
-                <viewController title="Mapa" id="5OZ-YH-42J" sceneMemberID="viewController">
+                <viewController title="Mapa" id="5OZ-YH-42J" customClass="ViewController" customModule="LosHermanosTuristas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X3c-O3-ygg"/>
                         <viewControllerLayoutGuide type="bottom" id="f4d-Jp-hvh"/>
@@ -37,12 +37,19 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IgI-ts-UPW">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fSL-Ms-Nzh" firstAttribute="top" secondItem="X3c-O3-ygg" secondAttribute="bottom" id="9Vf-AN-Dhh"/>
+                            <constraint firstItem="IgI-ts-UPW" firstAttribute="trailing" secondItem="fSL-Ms-Nzh" secondAttribute="trailing" id="9t0-6p-vfe"/>
+                            <constraint firstItem="IgI-ts-UPW" firstAttribute="bottom" secondItem="f4d-Jp-hvh" secondAttribute="top" id="IOq-IH-tq6"/>
                             <constraint firstAttribute="trailing" secondItem="fSL-Ms-Nzh" secondAttribute="trailing" id="f8N-uh-LLn"/>
+                            <constraint firstItem="IgI-ts-UPW" firstAttribute="top" secondItem="fSL-Ms-Nzh" secondAttribute="bottom" id="gOF-Ik-qmw"/>
                             <constraint firstItem="fSL-Ms-Nzh" firstAttribute="leading" secondItem="5Fo-uz-zOB" secondAttribute="leading" id="mNT-Tk-ylj"/>
+                            <constraint firstItem="IgI-ts-UPW" firstAttribute="leading" secondItem="fSL-Ms-Nzh" secondAttribute="leading" id="skd-9F-SuA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3gP-KM-6sI">
@@ -55,6 +62,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="meuMapa" destination="IgI-ts-UPW" id="xQ8-9G-yqH"/>
                         <segue destination="BOF-fc-p2g" kind="show" id="Eg2-aS-3oj">
                             <nil key="action"/>
                         </segue>
@@ -77,7 +85,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vmp-Og-b6B" id="9JK-LV-Ild">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

@@ -7,17 +7,45 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate{
 
+    @IBOutlet weak var meuMapa: MKMapView!
+    
+    var locationManager = CLLocationManager()
+    var currentLocation = CLLocation()
+    let regionRadius: CLLocationDistance = 1000
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupLocation()
+        self.checkLocationAuth()
+        self.setRadius(currentLocation)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func checkLocationAuth() {
+        if CLLocationManager.authorizationStatus() != .AuthorizedWhenInUse {
+            locationManager.requestWhenInUseAuthorization()
+        }
+        locationManager.startUpdatingLocation()
+    }
+    
+    func setupLocation() {
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+    }
+    
+    func setRadius(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+        meuMapa.setRegion(coordinateRegion, animated: true)
     }
 
 
