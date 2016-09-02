@@ -11,6 +11,8 @@
 		3F041F2E1D79B93200DED750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F2C1D79B93200DED750 /* Main.storyboard */; };
 		3F041F331D79B93200DED750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F321D79B93200DED750 /* Assets.xcassets */; };
 		3F041F361D79B93200DED750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F341D79B93200DED750 /* LaunchScreen.storyboard */; };
+		3F041F3E1D79BEDB00DED750 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F041F3D1D79BEDB00DED750 /* CoreLocation.framework */; };
+		3F041F401D79BEE300DED750 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F041F3F1D79BEE300DED750 /* MapKit.framework */; };
 		3FDD34831D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34811D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld */; };
 		3FDD34991D79BF6200AC2D8A /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34951D79BF6200AC2D8A /* Tag+CoreDataProperties.swift */; };
 		3FDD349A1D79BF6200AC2D8A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34961D79BF6200AC2D8A /* Tag.swift */; };
@@ -28,6 +30,8 @@
 		3F041F321D79B93200DED750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F041F351D79B93200DED750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F041F371D79B93200DED750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F041F3D1D79BEDB00DED750 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3F041F3F1D79BEE300DED750 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3FDD34821D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LosHermanosTuristas.xcdatamodel; sourceTree = "<group>"; };
 		3FDD34951D79BF6200AC2D8A /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3FDD34961D79BF6200AC2D8A /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F041F401D79BEE300DED750 /* MapKit.framework in Frameworks */,
+				3F041F3E1D79BEDB00DED750 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +58,8 @@
 		3F041F1C1D79B93200DED750 = {
 			isa = PBXGroup;
 			children = (
+				3F041F3F1D79BEE300DED750 /* MapKit.framework */,
+				3F041F3D1D79BEDB00DED750 /* CoreLocation.framework */,
 				3F041F271D79B93200DED750 /* LosHermanosTuristas */,
 				3F041F261D79B93200DED750 /* Products */,
 			);
@@ -125,6 +133,7 @@
 				TargetAttributes = {
 					3F041F241D79B93200DED750 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = F32DL93W49;
 					};
 				};
 			};
@@ -287,10 +296,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LosHermanosTuristas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hackatruck.LosHermanosTuristas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -298,10 +310,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LosHermanosTuristas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hackatruck.LosHermanosTuristas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
