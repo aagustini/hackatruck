@@ -10,9 +10,9 @@
 		3F041F291D79B93200DED750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F041F281D79B93200DED750 /* AppDelegate.swift */; };
 		3F041F2B1D79B93200DED750 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F041F2A1D79B93200DED750 /* ViewController.swift */; };
 		3F041F2E1D79B93200DED750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F2C1D79B93200DED750 /* Main.storyboard */; };
-		3F041F311D79B93200DED750 /* LosHermanosTuristas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F041F2F1D79B93200DED750 /* LosHermanosTuristas.xcdatamodeld */; };
 		3F041F331D79B93200DED750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F321D79B93200DED750 /* Assets.xcassets */; };
 		3F041F361D79B93200DED750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F341D79B93200DED750 /* LaunchScreen.storyboard */; };
+		3FDD34831D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34811D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		3F041F281D79B93200DED750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F041F2A1D79B93200DED750 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F041F2D1D79B93200DED750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3F041F301D79B93200DED750 /* LosHermanosTuristas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LosHermanosTuristas.xcdatamodel; sourceTree = "<group>"; };
 		3F041F321D79B93200DED750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F041F351D79B93200DED750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F041F371D79B93200DED750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FDD34821D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LosHermanosTuristas.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +56,13 @@
 		3F041F271D79B93200DED750 /* LosHermanosTuristas */ = {
 			isa = PBXGroup;
 			children = (
+				3FDD34811D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld */,
 				3F041F281D79B93200DED750 /* AppDelegate.swift */,
 				3F041F2A1D79B93200DED750 /* ViewController.swift */,
 				3F041F2C1D79B93200DED750 /* Main.storyboard */,
 				3F041F321D79B93200DED750 /* Assets.xcassets */,
 				3F041F341D79B93200DED750 /* LaunchScreen.storyboard */,
 				3F041F371D79B93200DED750 /* Info.plist */,
-				3F041F2F1D79B93200DED750 /* LosHermanosTuristas.xcdatamodeld */,
 			);
 			path = LosHermanosTuristas;
 			sourceTree = "<group>";
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F041F311D79B93200DED750 /* LosHermanosTuristas.xcdatamodeld in Sources */,
+				3FDD34831D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld in Sources */,
 				3F041F2B1D79B93200DED750 /* ViewController.swift in Sources */,
 				3F041F291D79B93200DED750 /* AppDelegate.swift in Sources */,
 			);
@@ -292,16 +292,17 @@
 				3F041F3C1D79B93200DED750 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3F041F2F1D79B93200DED750 /* LosHermanosTuristas.xcdatamodeld */ = {
+		3FDD34811D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3F041F301D79B93200DED750 /* LosHermanosTuristas.xcdatamodel */,
+				3FDD34821D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodel */,
 			);
-			currentVersion = 3F041F301D79B93200DED750 /* LosHermanosTuristas.xcdatamodel */;
+			currentVersion = 3FDD34821D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodel */;
 			path = LosHermanosTuristas.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
