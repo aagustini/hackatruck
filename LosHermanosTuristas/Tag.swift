@@ -8,13 +8,15 @@
 
 import Foundation
 import CoreData
-
+import UIKit
 
 class Tag: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
-
-    init(tag:String) {
-        self.nameTag = tag
+    convenience init() {
+        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let entityDescriptiption: NSEntityDescription = NSEntityDescription.entityForName("Tag", inManagedObjectContext: context)!
+        
+        self.init(entity: entityDescriptiption, insertIntoManagedObjectContext: context)
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xTD-6a-hHD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xTD-6a-hHD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcL-Pi-iUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-599" y="66"/>
+            <point key="canvasLocation" x="-605" y="212"/>
         </scene>
         <!--Minhas imagens-->
         <scene sceneID="aN3-bC-DvD">
@@ -85,7 +85,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vmp-Og-b6B" id="9JK-LV-Ild">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -160,7 +160,7 @@
         <!--Details-->
         <scene sceneID="oa9-VG-LZy">
             <objects>
-                <viewController title="Details" id="OtO-eO-DV5" sceneMemberID="viewController">
+                <viewController title="Details" id="OtO-eO-DV5" customClass="ViewControllerAbout" customModule="LosHermanosTuristas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vft-u8-sHi"/>
                         <viewControllerLayoutGuide type="bottom" id="ONd-gx-E4L"/>
@@ -168,6 +168,22 @@
                     <view key="view" contentMode="scaleToFill" id="9EU-Lm-FXm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfi-XD-dma">
+                                <rect key="frame" x="213" y="541" width="144" height="30"/>
+                                <state key="normal" title="TestDb (console)"/>
+                                <connections>
+                                    <action selector="testarBancoDados:" destination="OtO-eO-DV5" eventType="touchUpInside" id="Sej-CY-CGn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAP-2G-tXX">
+                                <rect key="frame" x="33" y="541" width="46" height="30"/>
+                                <state key="normal" title="Init DB"/>
+                                <connections>
+                                    <action selector="iniciarBancoDados:" destination="OtO-eO-DV5" eventType="touchUpInside" id="Xof-E8-0nE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

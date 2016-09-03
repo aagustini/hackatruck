@@ -8,13 +8,29 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 
 class Photo: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
-
-    init(city:String, state: String, latitude: Double, longitude: Double, date: NSDate, title:String, descr:String, imageLocation: String, tags:NSSet?) {
+   convenience init() {
+        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let entityDescriptiption: NSEntityDescription = NSEntityDescription.entityForName("Photo", inManagedObjectContext: context)!
+        
+        self.init(entity: entityDescriptiption, insertIntoManagedObjectContext: context)
+    }
+    /*
+      convenience
+      init(city:String, state: String, latitude: Double, longitude: Double, date: NSDate, title:String, descr:String, imageLocation: String, tags:NSSet?) {
+        
+        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let entityDescriptiption: NSEntityDescription = NSEntityDescription.entityForName("Photo", inManagedObjectContext: context)!
+        
+        self.init(entity: entityDescriptiption, insertIntoManagedObjectContext: context)
+        
         self.city = city
         self.state = state
         self.latitude = latitude
@@ -26,4 +42,5 @@ class Photo: NSManagedObject {
         self.tags = tags
         
     }
+ */
 }
