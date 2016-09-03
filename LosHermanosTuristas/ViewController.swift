@@ -14,6 +14,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
 
     @IBOutlet weak var meuMapa: MKMapView!
     
+    @IBOutlet weak var searchField: UISearchBar!
+    
     var locationManager = CLLocationManager()
     var currentLocation = CLLocation()
     let regionRadius: CLLocationDistance = 1000
@@ -48,6 +50,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         meuMapa.setRegion(coordinateRegion, animated: true)
     }
 
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showSearch" {
+            if let novaView = segue.destinationViewController as? SearchTableViewController {
+                novaView.searchText = self.searchField.text
+            }
+        }
+    }
+    
+    
 
 }
 

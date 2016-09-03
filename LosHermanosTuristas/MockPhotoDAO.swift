@@ -10,7 +10,7 @@ import Foundation
 
 class MockPhotoDAO {
     private static var photos: [MockPhoto] = [MockPhoto]()
-  
+          
     
     static func inserir(photo: MockPhoto) {
         photos.append(photo)
