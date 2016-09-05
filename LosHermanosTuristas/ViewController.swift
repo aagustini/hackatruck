@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate{
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var meuMapa: MKMapView!
     
@@ -19,6 +19,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     var locationManager = CLLocationManager()
     var currentLocation = CLLocation()
     let regionRadius: CLLocationDistance = 1000
+    var isZoomed: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     }
     
     func setupLocation() {
+        locationManager = CLLocationManager()
+        
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
     }
@@ -60,6 +63,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         if segue.identifier == "showSearch" {
             if let novaView = segue.destinationViewController as? SearchTableViewController {
                 novaView.searchText = self.searchField.text
+            }
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if locations.count > 0 {
+            self.currentLocation = locations[0]
+            //print("Localização atual = ", locations[0].coordinate)
+            
+            if !isZoomed {
+                let spam: MKCoordinateSpan = MKCoordinateSpanMake(0.01 , 0.01)
+                let region:MKCoordinateRegion = MKCoordinateRegionMake(self.currentLocation.coordinate, spam)
+                
+                meuMapa.setRegion(region, animated: true)
+                
+                isZoomed = true
             }
         }
     }
