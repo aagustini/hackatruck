@@ -105,27 +105,59 @@
 		3F041F271D79B93200DED750 /* LosHermanosTuristas */ = {
 			isa = PBXGroup;
 			children = (
+				3F4289A21D7D8D72001F2027 /* OtherStuff */,
+				3F4289A01D7D8D29001F2027 /* ViewModels */,
+				3F42899F1D7D8D12001F2027 /* Views */,
+				3F42899E1D7D8CEE001F2027 /* Controllers */,
 				00507CF21D7ADA600002FD9C /* MockDAO */,
-				3FDD34A11D79C47B00AC2D8A /* AppDelegate.swift */,
 				3FDD348C1D79BDEC00AC2D8A /* DAO */,
-				3FDD34811D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld */,
-				3F041F2A1D79B93200DED750 /* ViewController.swift */,
-				0020ECCC1D79EB9A001DF829 /* ViewControllerAbout.swift */,
-				3F041F2C1D79B93200DED750 /* Main.storyboard */,
-				00E5693B1D7B4D470065205F /* SearchTableViewCell.swift */,
-				00E569391D7B16B90065205F /* SearchTableViewController.swift */,
-				00F46C4C1D7CC087003C5A87 /* ShowPhotosViewController.swift */,
-				00E5693D1D7B50B10065205F /* PhotoSearchViewModel.swift */,
-				3F041F321D79B93200DED750 /* Assets.xcassets */,
-				3F041F341D79B93200DED750 /* LaunchScreen.storyboard */,
-				3F041F371D79B93200DED750 /* Info.plist */,
 			);
 			path = LosHermanosTuristas;
+			sourceTree = "<group>";
+		};
+		3F42899E1D7D8CEE001F2027 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0020ECCC1D79EB9A001DF829 /* ViewControllerAbout.swift */,
+				3F041F2A1D79B93200DED750 /* ViewController.swift */,
+				00E569391D7B16B90065205F /* SearchTableViewController.swift */,
+				00F46C4C1D7CC087003C5A87 /* ShowPhotosViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3F42899F1D7D8D12001F2027 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F041F2C1D79B93200DED750 /* Main.storyboard */,
+				00E5693B1D7B4D470065205F /* SearchTableViewCell.swift */,
+				3F041F341D79B93200DED750 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3F4289A01D7D8D29001F2027 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				00E5693D1D7B50B10065205F /* PhotoSearchViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		3F4289A21D7D8D72001F2027 /* OtherStuff */ = {
+			isa = PBXGroup;
+			children = (
+				3F041F321D79B93200DED750 /* Assets.xcassets */,
+				3FDD34A11D79C47B00AC2D8A /* AppDelegate.swift */,
+				3F041F371D79B93200DED750 /* Info.plist */,
+			);
+			name = OtherStuff;
 			sourceTree = "<group>";
 		};
 		3FDD348C1D79BDEC00AC2D8A /* DAO */ = {
 			isa = PBXGroup;
 			children = (
+				3FDD34811D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld */,
 				3FDD34951D79BF6200AC2D8A /* Tag+CoreDataProperties.swift */,
 				3FDD34961D79BF6200AC2D8A /* Tag.swift */,
 				3FDD34971D79BF6200AC2D8A /* Photo+CoreDataProperties.swift */,
