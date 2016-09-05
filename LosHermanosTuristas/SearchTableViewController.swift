@@ -15,8 +15,8 @@ class SearchTableViewController: UITableViewController {
     
     var searchText: String?
     
+    var hashPhotos:[String:[MockPhoto]] = [String:[MockPhoto]]()
     
- 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +25,10 @@ class SearchTableViewController: UITableViewController {
            searchText = "Porto Alegre"   // que se passa??
         }
         
-        let hash:[String:[MockPhoto]] = MockPhotoDAO.buscarPhotos(searchText!)
+        self.hashPhotos = MockPhotoDAO.buscarPhotos(searchText!)
         
         
-        for (cidade, fotos) in hash {
+        for (cidade, fotos) in hashPhotos {
             if fotos.count > 0 {
                 photos.append(PhotoSearchViewModel(id: fotos[0].photoId, city: cidade, message: "Número de imagens:" + String(fotos.count), imagem: fotos[0].imageLocation!))
                 }
@@ -93,13 +93,20 @@ class SearchTableViewController: UITableViewController {
         
         // send to edit?
      }
-     }
+    }
 
+        // In a storyboard-based application, you will often want to do a little preparation before navigation
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if segue.identifier == "showPhotos" {
+                let showPhotosVC = segue.destinationViewController as! ShowPhotosViewController
+                
+                // Get the cell that generated this segue.
+                if let selectedMealCell = sender as? SearchTableViewCell {
+                    let indexPath = tableView.indexPathForCell(selectedMealCell)!
+                    let selectedGroup = photos[indexPath.row]
+                    showPhotosVC.photos	= hashPhotos[selectedGroup.city!]!
+                }
+           }
 
- 
-
-   
-
-    
-    
+        }
 }

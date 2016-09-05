@@ -41,6 +41,7 @@ class MockPhotoDAO {
                 temp += [photo]
                 result[key] = temp
            }
+        }
     
         let filterTags = MockTagDAO.buscarPhotos(filter);
 
@@ -56,8 +57,6 @@ class MockPhotoDAO {
                 
            }      
         }
-        
-      }
         return result;
     }
  

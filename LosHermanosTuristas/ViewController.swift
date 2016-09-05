@@ -22,6 +22,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if MockPhotoDAO.buscarTodos().count == 0 {
+            MockPhotoDAO.loadDB()
+        }
+        
         self.setupLocation()
         self.checkLocationAuth()
         self.setRadius(currentLocation)

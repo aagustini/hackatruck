@@ -15,6 +15,7 @@
 		00E5693A1D7B16B90065205F /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E569391D7B16B90065205F /* SearchTableViewController.swift */; };
 		00E5693C1D7B4D470065205F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5693B1D7B4D470065205F /* SearchTableViewCell.swift */; };
 		00E5693E1D7B50B10065205F /* PhotoSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E5693D1D7B50B10065205F /* PhotoSearchViewModel.swift */; };
+		00F46C4D1D7CC087003C5A87 /* ShowPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F46C4C1D7CC087003C5A87 /* ShowPhotosViewController.swift */; };
 		3F041F2B1D79B93200DED750 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F041F2A1D79B93200DED750 /* ViewController.swift */; };
 		3F041F2E1D79B93200DED750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F2C1D79B93200DED750 /* Main.storyboard */; };
 		3F041F331D79B93200DED750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F321D79B93200DED750 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		00E569391D7B16B90065205F /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		00E5693B1D7B4D470065205F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		00E5693D1D7B50B10065205F /* PhotoSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewModel.swift; sourceTree = "<group>"; };
+		00F46C4C1D7CC087003C5A87 /* ShowPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPhotosViewController.swift; sourceTree = "<group>"; };
 		3F041F251D79B93200DED750 /* LosHermanosTuristas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LosHermanosTuristas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F041F2A1D79B93200DED750 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F041F2D1D79B93200DED750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				3F041F2C1D79B93200DED750 /* Main.storyboard */,
 				00E5693B1D7B4D470065205F /* SearchTableViewCell.swift */,
 				00E569391D7B16B90065205F /* SearchTableViewController.swift */,
+				00F46C4C1D7CC087003C5A87 /* ShowPhotosViewController.swift */,
 				00E5693D1D7B50B10065205F /* PhotoSearchViewModel.swift */,
 				3F041F321D79B93200DED750 /* Assets.xcassets */,
 				3F041F341D79B93200DED750 /* LaunchScreen.storyboard */,
@@ -217,6 +220,7 @@
 				00507CFA1D7ADA8A0002FD9C /* MockTagDAO.swift in Sources */,
 				3F041F2B1D79B93200DED750 /* ViewController.swift in Sources */,
 				00507CF71D7ADA8A0002FD9C /* MockPhoto.swift in Sources */,
+				00F46C4D1D7CC087003C5A87 /* ShowPhotosViewController.swift in Sources */,
 				0020ECCD1D79EB9A001DF829 /* ViewControllerAbout.swift in Sources */,
 				3FDD349B1D79BF6200AC2D8A /* Photo+CoreDataProperties.swift in Sources */,
 				00E5693C1D7B4D470065205F /* SearchTableViewCell.swift in Sources */,

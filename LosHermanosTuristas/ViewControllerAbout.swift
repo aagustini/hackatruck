@@ -22,11 +22,6 @@ class ViewControllerAbout: UIViewController {
     }
     
     
-    
-    @IBAction func iniciarBancoDados(sender: AnyObject) {
-       MockPhotoDAO.loadDB()
-    }
- 
 
 
     @IBAction func testarBancoDados(sender: AnyObject) {
