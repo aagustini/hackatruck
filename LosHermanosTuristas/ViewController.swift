@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate{
+class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate{
 
     @IBOutlet weak var meuMapa: MKMapView!
     
@@ -26,6 +26,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         if MockPhotoDAO.buscarTodos().count == 0 {
             MockPhotoDAO.loadDB()
         }
+        self.searchField.delegate = self
+        
+        
         
         self.setupLocation()
         self.checkLocationAuth()
@@ -55,6 +58,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         meuMapa.setRegion(coordinateRegion, animated: true)
     }
 
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        print(" clique do search bar...")
+        if let novaView: SearchTableViewController =  SearchTableViewController() {
+            novaView.searchText = self.searchField.text
+            performSegueWithIdentifier("showSearch", sender: nil)        }
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showSearch" {

@@ -22,6 +22,7 @@
 		3F041F361D79B93200DED750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F341D79B93200DED750 /* LaunchScreen.storyboard */; };
 		3F041F3E1D79BEDB00DED750 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F041F3D1D79BEDB00DED750 /* CoreLocation.framework */; };
 		3F041F401D79BEE300DED750 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F041F3F1D79BEE300DED750 /* MapKit.framework */; };
+		3F4289A41D7D9E05001F2027 /* FotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4289A31D7D9E05001F2027 /* FotoViewController.swift */; };
 		3FDD34831D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34811D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld */; };
 		3FDD34991D79BF6200AC2D8A /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34951D79BF6200AC2D8A /* Tag+CoreDataProperties.swift */; };
 		3FDD349A1D79BF6200AC2D8A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34961D79BF6200AC2D8A /* Tag.swift */; };
@@ -50,6 +51,7 @@
 		3F041F371D79B93200DED750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F041F3D1D79BEDB00DED750 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F041F3F1D79BEE300DED750 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3F4289A31D7D9E05001F2027 /* FotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FotoViewController.swift; path = LosHermanosTuristas/FotoViewController.swift; sourceTree = "<group>"; };
 		3FDD34821D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LosHermanosTuristas.xcdatamodel; sourceTree = "<group>"; };
 		3FDD34951D79BF6200AC2D8A /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3FDD34961D79BF6200AC2D8A /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		3F42899E1D7D8CEE001F2027 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3F4289A31D7D9E05001F2027 /* FotoViewController.swift */,
 				0020ECCC1D79EB9A001DF829 /* ViewControllerAbout.swift */,
 				3F041F2A1D79B93200DED750 /* ViewController.swift */,
 				00E569391D7B16B90065205F /* SearchTableViewController.swift */,
@@ -200,7 +203,7 @@
 				TargetAttributes = {
 					3F041F241D79B93200DED750 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = F32DL93W49;
+						DevelopmentTeam = 248ZCZ5T93;
 					};
 				};
 			};
@@ -244,6 +247,7 @@
 				3FDD349A1D79BF6200AC2D8A /* Tag.swift in Sources */,
 				00E5693E1D7B50B10065205F /* PhotoSearchViewModel.swift in Sources */,
 				3FDD349E1D79BF8900AC2D8A /* PhotoDAO.swift in Sources */,
+				3F4289A41D7D9E05001F2027 /* FotoViewController.swift in Sources */,
 				3FDD34A21D79C47B00AC2D8A /* AppDelegate.swift in Sources */,
 				3FDD34831D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld in Sources */,
 				00507CF91D7ADA8A0002FD9C /* MockTag.swift in Sources */,
@@ -376,7 +380,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LosHermanosTuristas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hackatruck.LosHermanosTuristas;
+				PRODUCT_BUNDLE_IDENTIFIER = hackatruck.LosHermanosTuristas18;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -390,7 +394,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LosHermanosTuristas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hackatruck.LosHermanosTuristas;
+				PRODUCT_BUNDLE_IDENTIFIER = hackatruck.LosHermanosTuristas18;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

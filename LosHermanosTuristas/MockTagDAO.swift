@@ -15,7 +15,7 @@ class MockTagDAO {
 
     static func inserir(tag: MockTag) {
         tags.append(tag)
-        print("+ tag:" + tag.nameTag!)
+ //       print("+ tag:" + tag.nameTag!)
     }
     
     static func buscarTodos() -> [MockTag]{

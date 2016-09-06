@@ -11,21 +11,23 @@ import UIKit
 class ShowPhotosViewController: UIViewController {
     
     var photos: [MockPhoto]? = [MockPhoto]()
-    
+    var numPhotos: Int  = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
        loadData(0)
+        
         self.photoSlider.minimumValue = 0
-        self.photoSlider.maximumValue = Float((photos?.count)!)
+        self.photoSlider.maximumValue = Float(numPhotos)
         self.photoSlider.value = 0
-        self.sliderLabel.text = "1/" + String((photos?.count)!)
+        self.sliderLabel.text = "1/" + String(numPhotos)
     }
     
     func loadData(index: Int) {
         if photos != nil {
+           
             let photo = photos![index]
            
             self.imageView.image = UIImage(named: photo.imageLocation!)
@@ -37,8 +39,9 @@ class ShowPhotosViewController: UIViewController {
             for tag in photo.tags {
                 tagStr += " " + tag.nameTag!
             }
-            self.tagsLabel.text = tagStr
             
+            self.tagsLabel.text = tagStr
+            self.numPhotos = (photos?.count)!
         }
         
         
@@ -63,8 +66,13 @@ class ShowPhotosViewController: UIViewController {
     
     
     @IBAction func sliderValueChanged(sender: UISlider) {
-        var index = Int(sender.value)
-        index %= (photos?.count)!
+        let pos = sender.value
+        print("sender value: " + String(pos))
+       
+        print("pos: " + String(pos))
+        
+        let index = (Int( pos )) % numPhotos
+        
         sliderLabel.text = String((index+1)) + "/" + String((photos?.count)!)
         loadData(index)
         

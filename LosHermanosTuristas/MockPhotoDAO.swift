@@ -17,7 +17,7 @@ class MockPhotoDAO {
         for t:MockTag in photo.tags {
             t.photos.insert(photo)
         }
-        print ("+ photo: " + photo.city! + " " + photo.title!)
+        //print ("+ photo: " + photo.city! + " " + photo.title!)
     }
     
     static func buscarTodos() -> [MockPhoto]{
