@@ -32,84 +32,40 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     
     // MARK: Actions
+   @IBAction func takePicture(sender: UIButton) {
+        print("-- Tirando foto")
     
-    
-    
-    
-    @IBAction func takePicture(sender: UIButton) {
-        
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = .Camera
+    
         presentViewController(picker, animated: true, completion: nil)
-        
-        /*
-        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
-            if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
-                imagePicker.allowsEditing = false
-                imagePicker.sourceType = .Camera
-                imagePicker.cameraCaptureMode = .Photo
-                presentViewController(imagePicker, animated: true, completion: {})
-            } else {
-                postAlert("Rear camera doesn't exist", message: "Application cannot access the camera.")
-            }
-        } else {
-            postAlert("Camera inaccessable", message: "Application cannot access the camera.")
-        }
- */
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-        currentImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage; dismissViewControllerAnimated(true, completion: nil)
+        print("-- Foto tirada e salva em current image")
         
+        if let photoTaken = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            print("-- Salvou foto")
+            currentImage.image = photoTaken
+        }
         
-      /*
-        print("Got an image")
-        if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
-            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
-            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
-        }
-        imagePicker.dismissViewControllerAnimated(true, completion: {
-            // Anything you want to happen when the user saves an image
-        })
- */
+        dismissViewControllerAnimated(true, completion: nil)
     }
-   /*
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        print("User canceled image")
-        dismissViewControllerAnimated(true, completion: {
-            // Anything you want to happen when the user selects cancel
-        })
-    }
-    
-    func imageWasSavedSuccessfully(image: UIImage, didFinishSavingWithError error: NSError!, context: UnsafeMutablePointer<()>){
-        print("Image saved")
-        if let theError = error {
-            print("An error happened while saving the image = \(theError)")
-        } else {
-            print("Displaying")
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.currentImage.image = image
-            })
-        }
-    }
-    
-    func postAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
- */
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "savePhoto" {
-   //         let savePhoto = segue.destinationViewController as! ShowPhotosViewController
             
-            // Get the cell that generated this segue.
-           
+            let savePhoto = segue.destinationViewController as! DetailsViewController
+            
+            if let image = currentImage.image {
+                savePhoto.newImage = image
+                print("-- Foto enviada")
+            } else {
+                print("-- Não possui imagem para enviar")
             }
         }
+    }
 }

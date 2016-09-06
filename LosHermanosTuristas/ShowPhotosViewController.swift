@@ -67,9 +67,9 @@ class ShowPhotosViewController: UIViewController {
     
     @IBAction func sliderValueChanged(sender: UISlider) {
         let pos = sender.value
-        print("sender value: " + String(pos))
+       // print("sender value: " + String(pos))
        
-        print("pos: " + String(pos))
+       // print("pos: " + String(pos))
         
         let index = (Int( pos )) % numPhotos
         

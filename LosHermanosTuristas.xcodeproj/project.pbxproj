@@ -22,6 +22,8 @@
 		3F041F361D79B93200DED750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F041F341D79B93200DED750 /* LaunchScreen.storyboard */; };
 		3F041F3E1D79BEDB00DED750 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F041F3D1D79BEDB00DED750 /* CoreLocation.framework */; };
 		3F041F401D79BEE300DED750 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F041F3F1D79BEE300DED750 /* MapKit.framework */; };
+		3F1F9A621D7EF41300B00924 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F9A611D7EF41300B00924 /* DetailsViewController.swift */; };
+		3F1F9A641D7F041800B00924 /* Unknown-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3F1F9A631D7F041800B00924 /* Unknown-1.jpeg */; };
 		3F4289A41D7D9E05001F2027 /* FotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4289A31D7D9E05001F2027 /* FotoViewController.swift */; };
 		3FDD34831D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34811D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodeld */; };
 		3FDD34991D79BF6200AC2D8A /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD34951D79BF6200AC2D8A /* Tag+CoreDataProperties.swift */; };
@@ -51,6 +53,8 @@
 		3F041F371D79B93200DED750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F041F3D1D79BEDB00DED750 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F041F3F1D79BEE300DED750 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3F1F9A611D7EF41300B00924 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		3F1F9A631D7F041800B00924 /* Unknown-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Unknown-1.jpeg"; sourceTree = "<group>"; };
 		3F4289A31D7D9E05001F2027 /* FotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FotoViewController.swift; path = LosHermanosTuristas/FotoViewController.swift; sourceTree = "<group>"; };
 		3FDD34821D79BCE600AC2D8A /* LosHermanosTuristas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LosHermanosTuristas.xcdatamodel; sourceTree = "<group>"; };
 		3FDD34951D79BF6200AC2D8A /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 		3F42899E1D7D8CEE001F2027 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3F1F9A611D7EF41300B00924 /* DetailsViewController.swift */,
 				3F4289A31D7D9E05001F2027 /* FotoViewController.swift */,
 				0020ECCC1D79EB9A001DF829 /* ViewControllerAbout.swift */,
 				3F041F2A1D79B93200DED750 /* ViewController.swift */,
@@ -150,6 +155,7 @@
 		3F4289A21D7D8D72001F2027 /* OtherStuff */ = {
 			isa = PBXGroup;
 			children = (
+				3F1F9A631D7F041800B00924 /* Unknown-1.jpeg */,
 				3F041F321D79B93200DED750 /* Assets.xcassets */,
 				3FDD34A11D79C47B00AC2D8A /* AppDelegate.swift */,
 				3F041F371D79B93200DED750 /* Info.plist */,
@@ -230,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1F9A641D7F041800B00924 /* Unknown-1.jpeg in Resources */,
 				3F041F361D79B93200DED750 /* LaunchScreen.storyboard in Resources */,
 				3F041F331D79B93200DED750 /* Assets.xcassets in Resources */,
 				3F041F2E1D79B93200DED750 /* Main.storyboard in Resources */,
@@ -262,6 +269,7 @@
 				00E5693C1D7B4D470065205F /* SearchTableViewCell.swift in Sources */,
 				3FDD34991D79BF6200AC2D8A /* Tag+CoreDataProperties.swift in Sources */,
 				3FDD34A01D79C2E700AC2D8A /* TagDAO.swift in Sources */,
+				3F1F9A621D7EF41300B00924 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

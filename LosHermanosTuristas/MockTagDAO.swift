@@ -31,6 +31,14 @@ class MockTagDAO {
         return result
     }
 
+    static func getTag(filter: String) -> MockTag {
+        let result:MockTag = MockTag()
+        
+        for tag in tags where tag.nameTag == filter {
+            return tag
+        }
+        return result
+    }
     static func buscarPhotos(filter:String) -> [MockPhoto] {
         var result:[MockPhoto] = [MockPhoto]()
 
