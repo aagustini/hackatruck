@@ -49,5 +49,7 @@
 	<string>Camera</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Photos</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>O aplicativo precisa do GPS</string>
 </dict>
 </plist>

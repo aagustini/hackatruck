@@ -19,12 +19,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     var locationManager = CLLocationManager()
     var currentLocation = CLLocation()
     let regionRadius: CLLocationDistance = 1000
+    var isZoomed: Bool = false
+    var pins: [MockPhoto] = [MockPhoto]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if MockPhotoDAO.buscarTodos().count == 0 {
             MockPhotoDAO.loadDB()
+            pins = MockPhotoDAO.buscarTodos()
         }
         self.searchField.delegate = self
         
@@ -34,6 +37,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         self.checkLocationAuth()
         self.setRadius(currentLocation)
         // Do any additional setup after loading the view, typically from a nib.
+        
+        createPins()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +54,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     }
     
     func setupLocation() {
+        locationManager = CLLocationManager()
+        
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
     }
@@ -73,7 +80,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         }
     }
     
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if locations.count > 0 {
+            self.currentLocation = locations[0]
+            //print("Localização atual = ", locations[0].coordinate)
+            
+            if !isZoomed {
+                let spam: MKCoordinateSpan = MKCoordinateSpanMake(0.01 , 0.01)
+                let region:MKCoordinateRegion = MKCoordinateRegionMake(self.currentLocation.coordinate, spam)
+                
+                meuMapa.setRegion(region, animated: true)
+                
+                isZoomed = true
+            }
+        }
+    }
     
+    func createPins() {
+        //Para cada uma das fotos
+        for photo in pins {
+            //Cria uma localizacao com base na latitude e longitude da foto
+            var coord: CLLocationCoordinate2D = CLLocationCoordinate2D()
+            coord.latitude = (photo.latitude)!
+            coord.longitude = (photo.longitude)!
+            
+            //Cria uma anotation
+            let annotation: MKPointAnnotation = MKPointAnnotation()
+            annotation.coordinate = coord
+            annotation.title = photo.title
+            annotation.subtitle = photo.descr
+
+            meuMapa.addAnnotation(annotation)
+        }
+    }
 
 }
 
